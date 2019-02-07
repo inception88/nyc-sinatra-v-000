@@ -1,5 +1,7 @@
 <h1><%=@figure.name%></h1>
 <%@figures.landmarks.each do |landmark|%>
+<%if landmark != nil%>
 <h3><%="#{landmark.name}"%></h3>
+<%end%>
 <%end%>
 <a href="/figures">All Figures</a>
