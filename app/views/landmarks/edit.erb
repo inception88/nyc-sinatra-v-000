@@ -1,7 +1,7 @@
 <h1>Edit Historical Landmark</h1>
 
 <h2><%=@landmark.name%></h2>
-<h3><%=@landmark.year_completed%></h3>
+<h3><%=@landmark.year_completed.to_s%></h3>
 
 <form method="POST" action="/landmarks/<%=@landmark.id%>">
   <input id="hidden" type="hidden" name="_method" value="patch">
