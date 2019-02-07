@@ -3,8 +3,6 @@
 <h1><%=@landmark.name%></h1>
 <form method="POST" action="/landmarks/<%=@landmarks.id%>">
   <input id="hidden" type="hidden" name="_method" value="patch">
-  <h2>Name: <input type="text" name="figure[name]" id="figure_name"></h2>
-  <br>
   <h2>Edit Landmark:</h2>
   <label>Name<input type="text" name="landmark[name]" id="new_landmark"></label>
   <label>Year<input type="text" name="landmark[year]"></label>
