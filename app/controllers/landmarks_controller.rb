@@ -13,7 +13,7 @@ class LandmarksController < ApplicationController
   end
 
   get '/landmarks/:id' do
-
+    erb :'/landmarks/show'
   end
 
   get '/landmarks/:id' do
