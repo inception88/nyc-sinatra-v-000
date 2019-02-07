@@ -70,5 +70,6 @@ class FiguresController < ApplicationController
       @figure.landmarks << @landmark
     end
       @figure.save
+      redirect 
   end
 end
