@@ -23,7 +23,6 @@ class LandmarksController < ApplicationController
   end
 
   patch '/landmarks/:id' do
-    binding.pry
     @landmark = Landmark.find(params[:id])
     if params[:landmark][:name] != nil
       @landmark.name = params[:landmark][:name]
@@ -32,7 +31,6 @@ class LandmarksController < ApplicationController
       @landmark.year_completed = params[:landmark][:year_completed]
     end
     @landmark.save
-    binding.pry
     redirect "/landmarks/#{@landmark.id}"
   end
 
