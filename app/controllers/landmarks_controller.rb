@@ -9,7 +9,7 @@ class LandmarksController < ApplicationController
   end
 
   post '/landmarks' do
-    
+    @landmark = Landmark.create(params[:landmark_name])
   end
 
   get '/landmarks/:id' do
