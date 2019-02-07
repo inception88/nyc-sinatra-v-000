@@ -17,9 +17,6 @@ class FiguresController < ApplicationController
     @figure = Figure.create(name: params[:figure][:name])
     @titles = []
     @landmarks = []
-    if params[:figure][:name] != nil
-      @figure.name = params[:figure][:name]
-    end
     if params[:figure][:title_ids] != nil
       params[:figure][:title_ids].each do |id|
         @titles << Title.find_by(id: id)
@@ -52,6 +49,9 @@ class FiguresController < ApplicationController
     @figure = Figure.find(params[:id])
     @titles = []
     @landmarks = []
+    if params[:figure][:name] != nil
+      @figure.name = params[:figure][:name]
+    end
     if params[:figure][:title_ids] != nil
       params[:figure][:title_ids].each do |id|
         @titles << Title.find_by(id: id)
