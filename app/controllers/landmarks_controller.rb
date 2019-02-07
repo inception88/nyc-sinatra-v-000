@@ -23,6 +23,7 @@ class LandmarksController < ApplicationController
   end
 
   patch '/landmarks/:id' do
+    binding.pry
     @landmark = Landmark.find(params[:id])
     if params[:landmark][:name] != nil
       @landmark.name = params[:landmark][:name]
