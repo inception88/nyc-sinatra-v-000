@@ -40,5 +40,7 @@ class FiguresController < ApplicationController
       @figure.save
   end
 
-  get '/figures/:id/edit'
+  get '/figures/:id/edit' do
+    
+  end
 end
