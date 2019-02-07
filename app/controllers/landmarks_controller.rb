@@ -28,7 +28,12 @@ class LandmarksController < ApplicationController
   end
 
   patch '/landmarks/:id' do
-    
+    if params[:landmark][:name] != nil
+      @landmark.name = params[:landmark][:name]
+    end
+    if params[:landmark][:year_completed] != nil
+      @landmark.name = params[:landmark][:year_completed]
+    end
   end
 
 end
