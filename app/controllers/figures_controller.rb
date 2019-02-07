@@ -46,7 +46,7 @@ class FiguresController < ApplicationController
   end
 
   patch '/figures/:id' do
-    @figure = Figure.create(name: params[:figure][:name])
+    @figure = Figure.find(params[:id])
     @titles = []
     @landmarks = []
     if params[:figure][:title_ids] != nil
@@ -70,6 +70,6 @@ class FiguresController < ApplicationController
       @figure.landmarks << @landmark
     end
       @figure.save
-      redirect '/figures/:id'
+      redirect "/figures/#{@figure.id}"
   end
 end
