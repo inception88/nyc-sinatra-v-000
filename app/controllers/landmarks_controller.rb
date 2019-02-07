@@ -32,7 +32,7 @@ class LandmarksController < ApplicationController
       @landmark.name = params[:landmark][:name]
     end
     if params[:landmark][:year_completed] != nil
-      @landmark.name = params[:landmark][:year_completed]
+      @landmark.year_completed = params[:landmark][:year_completed]
     end
   end
 
